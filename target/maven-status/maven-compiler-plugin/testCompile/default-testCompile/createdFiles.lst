@@ -1,0 +1,8 @@
+br\edu\ifsul\testes\TestePersistirPessoa.class
+br\edu\ifsul\testes\TestePersistirVoo.class
+br\edu\ifsul\testes\TestePersistirCidade.class
+br\edu\ifsul\testes\TestePersistirEscalas.class
+br\edu\ifsul\testes\TestePersistirVooAgendado.class
+br\edu\ifsul\testes\TestePersistPassagem.class
+br\edu\ifsul\testes\TestePersistirAeroporto.class
+br\edu\ifsul\testes\TestePersistirClasse.class
