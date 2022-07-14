@@ -7,3 +7,4 @@ br\edu\ifsul\modelo\Passagem.class
 br\edu\ifsul\modelo\Pessoa.class
 br\edu\ifsul\modelo\Aeroporto.class
 br\edu\ifsul\modelo\Usuario.class
+br\edu\ifsul\utilrelatorios\FabricaObjetos.class
