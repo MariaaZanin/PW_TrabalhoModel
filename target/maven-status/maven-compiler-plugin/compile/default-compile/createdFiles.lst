@@ -1,3 +1,4 @@
+br\edu\ifsul\modelo\Permissao.class
 br\edu\ifsul\modelo\Classe.class
 br\edu\ifsul\modelo\Cidade.class
 br\edu\ifsul\modelo\Voo.class
@@ -5,3 +6,4 @@ br\edu\ifsul\modelo\VooAgendado.class
 br\edu\ifsul\modelo\Passagem.class
 br\edu\ifsul\modelo\Pessoa.class
 br\edu\ifsul\modelo\Aeroporto.class
+br\edu\ifsul\modelo\Usuario.class

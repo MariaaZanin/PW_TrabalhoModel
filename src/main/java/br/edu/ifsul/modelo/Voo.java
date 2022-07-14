@@ -13,10 +13,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -34,12 +31,12 @@ public class Voo implements Serializable{
     private Integer id;
     @NotBlank(message = "A descricao nao pode ser em branco")
 //    @Length(max = 40, message = "A descricao nao pode ter mais que {max} caracteres")
-    @Column(name = "descricao", nullable = false)
+    @Column(name = "descricao", nullable = false, columnDefinition = "text")
     private String descricao;
     @NotNull(message = "O tempo estimado deve ser informado")
     @Column(name = "tempoEstimado", nullable = false, columnDefinition = "decimal(12,2)")
     private Double tempoEstimado;
-    @NotBlank(message = "O campo ativo deve ser informado")
+    @NotNull(message = "O campo ativo deve ser informado")
     @Column(name = "ativo", nullable = false)
     private Boolean ativo;
     @NotBlank(message = "A periodicidade nao pode ser em branco")
@@ -130,5 +127,14 @@ public class Voo implements Serializable{
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+    
+    public void adicionarVooAgendado(VooAgendado obj) {
+        obj.setVoo(this);
+        this.getVoo_agendado().add(obj);
+    }
+
+    public void removerVooAgendado(int index) {
+        this.voo_agendado.remove(index);
     }
 }
