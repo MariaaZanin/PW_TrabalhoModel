@@ -15,8 +15,12 @@ public class TestePersistirPermissao {
         Permissao padmin = new Permissao();
         padmin.setNome("ADMINISTRADOR");
         padmin.setDescricao("Usuario admin");
+        Permissao pusuario = new Permissao();
+        pusuario.setNome("USUARIO");
+        pusuario.setDescricao("Usuario Simples");
         em.getTransaction().begin();
         em.persist(padmin);
+        em.persist(pusuario);
         em.getTransaction().commit();
         em.close();
         emf.close();

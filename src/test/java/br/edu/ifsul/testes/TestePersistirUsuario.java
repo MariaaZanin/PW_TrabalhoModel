@@ -14,8 +14,12 @@ public class TestePersistirUsuario {
         Usuario u = new Usuario();
         u.setNomdUsuaurio("Marta");
         u.setSenha("123456");
+        Usuario u2 = new Usuario();
+        u2.setNomdUsuaurio("Mario");
+        u2.setSenha("123456");
         em.getTransaction().begin();
         em.persist(u);
+        em.persist(u2);
         em.getTransaction().commit();
         em.close();
         emf.close();
